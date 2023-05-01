@@ -1,0 +1,12 @@
+(defun mayor (a b)
+  (if (> a b)
+    a
+    b
+    )
+)
+
+(defun numMayor (funcion lista)
+  (reduce #'funcion lista)
+)
+
+(print (numMayor (read)))

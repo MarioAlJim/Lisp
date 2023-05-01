@@ -1,0 +1,14 @@
+(defun longitudList (lista &optional (l 0))
+  (if(null lista)
+   (print l)
+   ()
+  )
+)
+
+
+
+
+(defun longitud-rec (lst)
+(if (null lst)
+ 0
+ (+ (longitud-rec (cdr lst)) 1)))

@@ -1,0 +1,7 @@
+(defun FunReduce (funcion lista &optional (resultado (funcall funcion)))
+  (if (not lista) resultado
+     (reduce2 funcion (cdr lista) (funcall funcion resultado (car lista)))
+  )
+)
+
+;(print (FunReduce (eval (read)) (read)))

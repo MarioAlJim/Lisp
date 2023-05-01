@@ -1,0 +1,4 @@
+
+
+(print (fun (read) (read)))
+(print (fun (eval (read)) (read)))

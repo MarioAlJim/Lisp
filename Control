@@ -1,0 +1,22 @@
+(defun mayor (a b)
+  (if (> a b)
+      a
+      b
+  )
+)
+
+(defun compara (a b)
+   (cond
+  ((= a b) (princ “A igual a B”))
+     ((< a b) (princ “A es menor que B”))
+     (t (princ “A es mayor que B”))
+     )
+)
+
+(defun figura (forma r)
+  (case forma
+    (circulo (* pi r r))
+    (esfera (* 4 pi r r))
+    (otherwise (princ “figura no conocida”))
+    )
+)

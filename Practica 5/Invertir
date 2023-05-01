@@ -1,0 +1,15 @@
+(defun Principal (listP &optional (listFinal NIL) (listCdr NIL) (listCar NIL)) 
+(print listP)
+(print listCdr)
+(print listCar)
+(print listFinal)
+  (if (not listP)
+      (if (not listCdr)
+          (print listFinal)
+          (Principal listCdr (append listFinal (list listCar)) '() '())
+      )
+      (Principal (cdr listP) listFinal (append listCdr `(,(cdar listP))) (append listCar `(,(caar listP))))
+  )
+  
+)
+

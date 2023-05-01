@@ -1,0 +1,7 @@
+(defun Aplanadora (listP &optional (listFinal '()))
+  (if (equal (car listP) NIL)
+    listFinal
+    (Aplanadora (cdr listP) (append listFinal (append listCar `(,(caar listP)))))
+    )
+  )
+)

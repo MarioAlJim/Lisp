@@ -1,0 +1,58 @@
+(defun numNaturales (n)
+  (dotimes (i (+ n 1))
+   (print i)
+   )
+)
+
+
+
+(defun numExponente (num expo)
+  (setq m num)
+  (do ((x 0 (1+ x)))
+      ((= x (- expo 1)) x)
+      (setq m (* m num))
+      )
+  (print m) 
+)
+
+
+
+(defun primo(num)
+  (setq ci 1)
+  (setq primo 1)
+  (loop (setq ci (1+ ci))
+   (if (= (mod num ci) 0)
+       (setq comp 0)
+       (setq comp 1)
+   )     
+  (when (or (= ci (- num 1)) (= comp 0)) (return ci)) )
+  (if (= comp 0)
+      (print "No es primo")
+      (print "Es primo")
+      )
+)
+
+
+
+(defun sumaNumPares()
+  (princ "Escriba un numero: ")
+  (setq a (read))
+  (princ "Escriba un numero: ")
+  (setq b (read))
+  (princ "Escriba un numero: ")
+  (setq c (read))
+  (princ "Escriba un numero: ")
+  (setq d (read))
+  (princ "Escriba un numero: ")
+  (setq e (read))
+  (setq sum 0)
+  (dolist (x (list a b c d e)) 
+      (if (= (mod x 2) 0) 
+          (setq sum (+ sum x))
+          ()
+      )
+  )
+  (format t "La suma de los numeros pares es: ~D~%" sum)
+)
+
+

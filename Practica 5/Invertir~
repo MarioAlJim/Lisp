@@ -1,0 +1,12 @@
+(defun Principal (listaP &optional listC) 
+  (setq listC (clonarList))
+  (print listC)
+)
+
+
+(defun clonarList (listP &optional listC) 
+  (if (not listP)
+    (clonarList (cdr listP) (listL (append listA `(,(car listP))))) 
+    )
+    listC
+)

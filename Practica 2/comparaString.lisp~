@@ -1,0 +1,10 @@
+(defun comparaString (a b c)
+  (if (equal c T)
+      (equalp a b)
+      (equal a b)
+  )
+)
+
+
+
+(print (comparaString (read) (read) (read)))

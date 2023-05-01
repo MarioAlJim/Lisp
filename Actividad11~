@@ -1,0 +1,5 @@
+(defun numNaturales (n)
+  (dotimes (i n)
+   (print i)
+      )
+)

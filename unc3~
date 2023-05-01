@@ -1,0 +1,30 @@
+(defun inc3 (n)
+  (+ 3 n)
+)
+
+(defun raiz (x &optional n)
+  (if n
+      (expt x (/ n))
+      (sqrt x)
+   )
+)
+
+(defun raizOptima (x &optional (n 2))
+  (expt x (/ n))
+)
+
+(defun areaCirculo()
+  (terpri)
+  (princ "Escribe el radio del circulo ")
+  (setq radio (read))
+  (princ "El area de tu circulo es ")
+  (princ (* pi radio radio))
+  (terpri)
+)
+
+(defun area-circulo2()
+  (terpri)
+  (princ "Por favor, teclea un radio ")
+  (setq radio (read))
+  (format t "El radio del circulo con radio ~4F es: ~7F~%" radio (* pi radio radio))
+)

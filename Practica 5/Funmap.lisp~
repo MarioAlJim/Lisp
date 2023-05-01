@@ -1,0 +1,7 @@
+(defun Funmapcar (fun list)
+  (if (not list) '() 
+     (cons (funcall fun (car list)) (Funmapcar fun (cdr list)))
+   )
+)
+
+(print (Funmapcar (eval (read)) (read)))

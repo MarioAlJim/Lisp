@@ -1,0 +1,10 @@
+(defun comparaString (a b c)
+  (if (= c T)
+      (equal a b)
+      (STRING= a b)
+  )
+)
+
+
+
+(print (lispVeracidad (read) (read) (read)))

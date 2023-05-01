@@ -1,0 +1,84 @@
+(defun compara ()
+  (princ "Por favor, teclea un numero : ")
+  (setq a (read))
+  (princ "Por favor, teclea otro numero: ")
+  (setq b (read))
+   (cond
+   ((= a b) (format t "Los numeros son iguales"))
+   ((> a b) (format t "El primer numero es mayor: ~F~% " a))
+   (t (format t "El segundo numero es mayor: ~F~% " b))
+    )
+)
+
+
+
+(defun parimpar ()
+  (princ "Escribe un numero: ")
+  (setq num (read))
+  (if  (= (mod num 2) 0)
+   (princ "Par")
+   (princ "Impar")
+  )
+)
+
+
+
+(defun comparetresnum ()
+  (princ "Escriba el primer numero : ")
+  (setq a (read))
+  (princ "Escriba el segundo numero: ")
+  (setq b (read))
+  (princ "Escriba el tercer numero: ")
+  (setq c (read))
+   (cond
+   ((= a b) (cond 
+            ((= a c) (format t "Los tres numeros son iguales, numero mayor indeterminado"))
+            ((> a c) (format t "El primer y segundo numero son mayores: ~F, ~F~%" a b))
+            (t (format t "El tercer numero es mayor: ~F~%" c)))
+   )
+   ((> a b) (cond 
+            ((= a c) (format t "El primer y tercer numero son mayores: ~F, ~F~%" a c ))
+            ((> a c) (format t "El primer numero es mayor: ~F~%" a))
+            (t (format t "El tercer numero es mayor: ~F~%" c)))
+   )
+   (t (cond 
+            ((= b c) (format t  "El segundo y tercer numero son mayores: ~F, ~F~%" b c))
+            ((> b c) (format t "El segundo numero es mayor: ~F~%" b))
+            (t (format t "El tercer numero es mayor: ~F~%" c)))
+   )
+   )
+)
+
+
+
+(defun aumentarsegundo()
+  (princ "Escriba las horas (formato de 24hrs): ")
+  (setq h (read))
+  (princ "Escriba los minutos: ")
+  (setq m (read))
+  (princ "Escriba los segundos: ")
+  (setq s (read))
+  (if (= s 59)
+   (if(= m 59)
+     (if (= h 23)
+       (setf s 0 m 0 h 0)
+       (setf s 0 m 0 h (+ 1 h))
+     )
+     (setf s 0 m (+ 1 m))
+   )
+   (setq s (+ 1 s))
+  )
+  (format t "Su hora aumentada en un segundo es ~D:~D:~D~% " h m s)
+)
+
+
+
+(defun numeroPN0()
+  (princ "Escriba un numero: ")
+  (setq num (read))
+  (cond
+   ((= num 0) (format t "El numero es cero"))
+   ((> num 0) (format t "El numero es positivo"))
+   (t (format t "El numero es negativo"))
+   )
+)
